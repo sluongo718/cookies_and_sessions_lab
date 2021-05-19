@@ -1,1 +1,9 @@
-<form></form>
+<%= form_tag('/products/add', method: :post) do %>
+    <label for="product">Product Name</label>
+    <input type="text" id='product' name='product'>
+    <input type="submit" value="add to cart">
+  <% end %>
+  
+  <div>
+    <%= session[:cart] %>
+  </div>
